@@ -175,13 +175,18 @@
     }
     .info img{
         width: 15vw;
-        margin: 0 2vw;
+        margin: 0 0vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
     .text{
         /* border: 1px solid green; */
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     .computer{
         font-size: 6vw;

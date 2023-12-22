@@ -3,6 +3,7 @@ let computerVal;
 // if "JSON.parse(localStorage.getItem(count)) " this statement is NULL in below then it set by default
 let count=null;
 
+// To reset local variable value 
 document.querySelector('.reset').addEventListener('click',function(){
     localStorage.removeItem('count');
     count={
@@ -11,6 +12,14 @@ document.querySelector('.reset').addEventListener('click',function(){
         ysrc : "",
         csrc : ""
     }
+
+    document.querySelector('.text').querySelector('img').setAttribute('src','');
+    document.querySelector('.text').querySelector('span').innerText='';
+
+    document.querySelector('.computer').querySelector('span').innerText='';
+    document.querySelector('.computer').querySelector('img').setAttribute('src',`${count.csrc}`);
+
+    document.querySelector('.winer').innerText = '';
     console.log('hahksd');
     displayScore();
 })
@@ -137,7 +146,7 @@ Array.from(box).forEach(function(element,index){
         text.querySelector('img').setAttribute('src',`${count.ysrc}`);
 
         console.log(count.csrc);
-        document.querySelector('.computer').querySelector('span').innerText='COMPUTER';
+        document.querySelector('.computer').querySelector('span').innerText='BOT';
         document.querySelector('.computer').querySelector('img').setAttribute('src',`${count.csrc}`);
         // To save all score into a local storage
         localStorage.setItem("count" , JSON.stringify(count));
