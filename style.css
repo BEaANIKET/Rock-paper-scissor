@@ -1,17 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 
 }
 
 .container{
-    height: 100vh;
+    min-height:100vh;
     width: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    /* border: 2px solid rgb(12, 236, 27); */
 
 
 }
@@ -19,11 +21,15 @@
     width: fit-content ;
     height: fit-content;
     /* background-color: aqua; */
-    display: grid;
-    grid-template-columns: repeat(3,150px);
-    grid-template-rows: 90px;
+    display: flex;
+    margin-top: 10vh;
     column-gap: 10px;
+    /* border: 2px solid yellow; */
    
+}
+.game img{
+    width: 150px;
+    margin: 20px;
 }
 .box{
     /* background-color: red; */
@@ -32,8 +38,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: aqua;
-    border-radius: 20px;
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 4px white;
+    /* background-color: aqu */
+    border-radius: 50%;
 }
 .boxText{
     font-size: 30px;
@@ -46,7 +54,7 @@
 .totalscore{
     display: flex;
     justify-content: space-between;
-    width: 460px;
+    width: 562px;
     /* border: 2px solid red; */
     align-items: center;
     margin-top: 6vh;
@@ -90,26 +98,55 @@
     color: white;
     margin-top: 10vh;
     color: yellow;
+    margin-left: 35px;
 
+}
+.info img{
+    width: 70px;
+    margin: 0 30px;
+
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 102, 0);
+    /* margin-right: 33px; */
 }
 
 .computer{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: white;
     color: rgb(255, 102, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-@media (max-width :500px ) {
+.winer{
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(11, 237, 41);
+    text-shadow: 3px 3px 3px;
+    transition: all ease 1s;
+}
+
+
+@media (max-width :650px ) {
     .box{
-        box-shadow: 2px 2px 4px white;
+        
         border: transparent;
+        /* gap: 20px; */
+        margin: 0 2vw;
     }
     .game{
-        grid-template-columns: 70vw;
-        grid-template-rows: repeat(3,40px);
-        grid-row-gap: 10px;
+        margin-top: 5vh;
     }
+    .box img{
+        width: 15vw;
+    }
+    
     .score{
         font-size: 10vw;      
         color: blue;
@@ -121,6 +158,7 @@
         flex-direction: column-reverse;
         color: blue;
         text-shadow: 1px 1px 3px red;
+        
     }
     .maxScore{
         font-size: 8vw;
@@ -131,11 +169,27 @@
         font-size: 8vw;
         margin-top: 5vh;
         color: yellow;
+        /* border: 1px solid red; */
+        margin:5vw 0 0 0;
         
+    }
+    .info img{
+        width: 15vw;
+        margin: 0 2vw;
+    }
+    .text{
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .computer{
         font-size: 6vw;
         color: rgb(255, 102, 0);
+        /* border: 1px solid rgb(222, 224, 222); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
     }
 }
